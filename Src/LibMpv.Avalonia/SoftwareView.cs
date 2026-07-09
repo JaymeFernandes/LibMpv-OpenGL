@@ -108,9 +108,11 @@ public class SoftwareView : Control, IVideoView
         if(Interlocked.Exchange(ref _renderQueued, 1) == 1)
             return;
         
+        
         this.Dispatcher.Post(() =>
         {
             _renderQueued = 0;
+
             InvalidateVisual();
         }, DispatcherPriority.Render);
     }
