@@ -28,24 +28,10 @@
     <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.2" />
   </ItemGroup>
 
-  <ItemGroup Condition="$(AndroidSupportedAbis.Contains('armeabi-v7a')) or $(RuntimeIdentifiers.Contains('android-arm'))">
-    <AndroidNativeLibrary Include="$(NativePath)\armeabi-v7a\**\*"/>
-  </ItemGroup>
-  
-  <ItemGroup Condition="$(AndroidSupportedAbis.Contains('arm64-v8a')) or $(RuntimeIdentifiers.Contains('android-arm64'))">
-    <AndroidNativeLibrary Include="$(NativePath)\arm64-v8a\**\*"/>
-  </ItemGroup>
-
-  <ItemGroup Condition="$(AndroidSupportedAbis.Contains('x86')) or $(RuntimeIdentifiers.Contains('android-arm'))">
-    <AndroidNativeLibrary Include="$(NativePath)\x86_64\**\*"/>
-  </ItemGroup>
-
-  <ItemGroup Condition="$(AndroidSupportedAbis.Contains('x86_64')) or $(RuntimeIdentifiers.Contains('android-x64'))">
-    <AndroidNativeLibrary Include="$(NativePath)\x86_64\**\*"/>
-  </ItemGroup>
-  
   <ItemGroup>
-    <AndroidNativeLibrary Include="..\..\..\MpvDll\Android\arm64-v8a\**\*"/>
+    <AndroidNativeLibrary Include="$(NativePath)\arm64-v8a\**\*"/>
+    <AndroidNativeLibrary Include="$(NativePath)\armeabi-v7a\**\*"/>
+    <AndroidNativeLibrary Include="$(NativePath)\x86_64\**\*"/>
   </ItemGroup>
   
   <ItemGroup>

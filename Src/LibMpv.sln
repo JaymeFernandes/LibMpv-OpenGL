@@ -59,7 +59,7 @@ Global
 		{ABD9B680-FD90-453E-8115-E965CC686065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABD9B680-FD90-453E-8115-E965CC686065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABD9B680-FD90-453E-8115-E965CC686065}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

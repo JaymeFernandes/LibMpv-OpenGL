@@ -10,7 +10,7 @@ public class AndroidFunctionResolver : FunctionResolverBase
 
     protected override string GetNativeLibraryName(string libraryName, int version) =>
         version > 0 ? $"{libraryName}.so.{version}" : $"{libraryName}.so";
-    protected override string[] GetSearchPaths() => new string[] { "" }; // Let the system determine where libmpv is
+    protected override string[] GetSearchPaths() => new string[] { MpvApi.RootPath };
     protected override IntPtr LoadNativeLibrary(string libraryName) => dlopen(libraryName, RTLD_NOW);
     protected override IntPtr FindFunctionPointer(IntPtr nativeLibraryHandle, string functionName) => dlsym(nativeLibraryHandle, functionName);
 
