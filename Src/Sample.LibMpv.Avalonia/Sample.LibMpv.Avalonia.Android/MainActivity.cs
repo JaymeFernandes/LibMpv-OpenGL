@@ -16,6 +16,6 @@ public class MainActivity : AvaloniaMainActivity
 {
     public MainActivity()
     {
-        //MpvApi.RootPath = Android.Application.Context.ApplicationInfo.NativeLibraryDir;
+        
     }
 }
